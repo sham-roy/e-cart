@@ -1,0 +1,82 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "productName": "iphone 18 pro ultra max ",
+            "categoryId":"1",
+            "description":"latest in 18 series of iphone, the pro max ultra. with dual dynamic island",
+            "is_available":"true",
+            "productImg":"https://content.api.news/v3/images/bin/2a1173093754801f89e4c22c432f29e6",
+            "raing":4.5,
+            "review":150,
+            "vendore_name":"cochine pro max",
+            "warranty":1
+
+        },
+        {
+            "id": 2,
+            "productName": "samsung s30 ultra pro max",
+            "categoryId":"1",
+            "description":"latest in samsung s30 ultra pro max, capture the multi universe with 10000x zoom ",
+            "is_available":"true",
+            "productImg":"https://www.gizmochina.com/wp-content/uploads/2022/06/Samsung-Galaxy-S23-Ultra-Concept-Render.jpeg",
+            "raing":4.5,
+            "review":150,
+            "vendore_name":"cochine pro max",
+            "warranty":1
+
+        },
+        {
+            "id": 3,
+            "productName": "microsoft surface book mini pro ",
+            "categoryId":"2",
+            "description":"latest in  surface book series of microsoft , the book mini pro. microsoft surface book mini pro ",
+            "is_available":"true",
+            "productImg":"https://www.notebookcheck.biz/uploads/tx_nbc2/SP6_i7_4-3_30.jpg",
+            "raing":4.5,
+            "review":150,
+            "vendore_name":"cochine pro max",
+            "warranty":1
+
+        },
+        {
+            "id": 4,
+            "productName": "mac book ultra water",
+            "categoryId":"2",
+            "description":"latest in mac series , water resistant mac series",
+            "is_available":"true",
+            "productImg":"https://th.bing.com/th/id/OIP.kGVXUBVB5AnfoxQckqhrawHaFj?pid=ImgDet&rs=1",
+            "raing":4.5,
+            "review":150,
+            "vendore_name":"cochine pro max",
+            "warranty":1
+
+        },
+        {
+            "id": 5,
+            "productName": "samsung clutch s15",
+            "categoryId":"3",
+            "description":"the only watch with hybrid Nano technology, clutch s15",
+            "is_available":"true",
+            "productImg":"https://www.bhphotovideo.com/images/images2500x2500/samsung_sm_r835usdaxar_galaxy_watch_active2_lte_1491584.jpg",
+            "raing":4.5,
+            "review":150,
+            "vendore_name":"cochine pro max",
+            "warranty":1
+
+        },
+        {
+            "id": 6,
+            "productName": "pixel w8 pro max u",
+            "categoryId":"3",
+            "description":"watch series 8 of pixel",
+            "is_available":"true",
+            "productImg":"https://akm-img-a-in.tosshub.com/indiatoday/images/bodyeditor/202104/Pixel_Watch_uu-1200x900.jpg?2HCdpd2CdOYc4q.gvD8PveX7ekvBfwLM",
+            "raing":4.5,
+            "review":150,
+            "vendore_name":"cochine pro max",
+            "warranty":1
+
+        }
+    ]
+}
