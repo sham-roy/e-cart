@@ -1,31 +1,28 @@
-<!-- Product section-->
 <section class="py-5">
     <div class="container px-4 px-lg-5 my-5">
         <div class="row gx-4 gx-lg-5 align-items-center">
-            <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0"
-                    src="{{pData.productImg}}" alt="..." /></div>
             <div class="col-md-6">
-                <div class="small mb-1">SKU: BST-498</div>
-                <h1 class="display-5 fw-bolder">{{pData.productName}}</h1>
-                <div class="fs-5 mb-5">
-                    <span class="text-decoration-line-through">{{pData.price}}</span>
-                    <span>Rating | <strong> {{pData.raing}}</strong></span>
+                <img class="card-img-top mb-5 mb-md-0" src="{{pdata.productImg}}" alt="..." />
+            </div>
+            <div class="col-md-6">
+                <div class="small mb-1">BrandName | {{pdata.brand_name}}</div>
+                <h1 class="display-5 fw-bolder">{{pdata.productName}}</h1>
+                <div class="fs-5 ">
+                    <span class="">Price|{{pdata.price}}</span> <br>
+                    <span>Rating| {{pdata.rating}}</span>
                 </div>
-                <p class="lead">{{pData.description}}</p>
-                <h6>Review | {{pData.review}}</h6>
-                <h6>Warranty | {{pData.warranty}}</h6>
-                
-
+                <p class="lead">Description|{{pdata.description}}</p>
+                <h6>Reviews | {{pdata.review}}</h6>
+                <h6>warranty | {{pdata.warranty}} year</h6>
                 <div class="d-flex">
-                    <!-- <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1"
-                        style="max-width: 3rem" /> -->
-                    <button class="btn btn-outline-dark flex-shrink-0" type="button">
+                    <!-- <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" /> -->
+                    <button class="btn btn-outline-light flex-shrink-0" type="button">
                         <i class="bi-cart-fill me-1"></i>
-                        Edit
+                        <a style="text-decoration: none;" href="edit-product/{{pdata.id}}">Edit</a>
                     </button>
-                    <button class="btn btn-outline-dark flex-shrink-0 ms-3" type="button">
+                    <button class="btn btn-outline-light flex-shrink-0 ms-3" type="button">
                         <i class="bi-cart-fill me-1"></i>
-                        Delete
+                        <a style="text-decoration: none;" href="products/delete-product/{{pdata.id}}">Delete</a>
                     </button>
                 </div>
             </div>

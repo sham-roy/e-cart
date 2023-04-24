@@ -244,6 +244,10 @@ data sharing frm module to module
 ---------------------------------
 behaviour subject - rxjs
   reactive extension for js
+        
+        1 import behavioursubject
+        2 create an object of behaviour subject
+        3 send the data using next method
 
 
 

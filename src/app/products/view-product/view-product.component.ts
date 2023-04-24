@@ -9,20 +9,24 @@ import { ProductService } from '../service/product.service';
 })
 export class ViewProductComponent implements OnInit {
 
-  pid:any
-  pData:any
+  pid: any
+  pdata: any
 
-  constructor (private ar:ActivatedRoute,private ps:ProductService) {}
+  constructor(private ar: ActivatedRoute, private ps: ProductService) {
 
+  }
 
   ngOnInit(): void {
-    this.ar.params.subscribe((data:any)=>{
-      this.pid=data['id']
+    this.ar.params.subscribe((data: any) => {
+      this.pid = data["id"]
     })
 
-    this.ps.viesProduct(this.pid).subscribe((item:any)=>{
-      this.pData=item
+    this.ps.ViewProduct(this.pid).subscribe((item: any) => {
+      this.pdata = item
+      console.log(this.pdata);
+
     })
+
   }
 
 }

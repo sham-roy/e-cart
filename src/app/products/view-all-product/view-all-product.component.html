@@ -1,55 +1,68 @@
-<div class="container-fluid">
+<div class="container-fluid bg-secondary text-white pt-5 pb-5">
     <div class="row">
-        <div class="col-3 text-center">
-            <a href="" (click)="filter('')">
-                <img src="" alt="">
-                <h2>all products </h2>
+        <div class="col-3 text-center ">
+            <a (click)="filter('')" style="text-decoration: none;">
+                <img style="height: 100px; border-radius: 90px;"
+                    src="https://png.pngtree.com/element_our/png_detail/20181021/cart-shopping-trolley-buy-icon-png_141621.jpg" alt="">
+                <h3>all</h3>
+            </a>
+
+        </div>
+        <div (click)="filter(1)" class="col-3 text-center">
+            <a style="text-decoration: none;">
+                <img style="height: 100px; border-radius: 90px;"
+                    src="https://img.freepik.com/premium-vector/phone-logo-icon-vector-isolated_717577-56.jpg" alt="">
+                <h3>smart phones</h3>
             </a>
         </div>
-        <div class="col-3 text-center">
-            <a href="" (click)="filter('1')">
-                <img src="" alt="">
-                <h2>phone</h2>
+        <div (click)="filter(2)" class="col-3 text-center">
+            <a style="text-decoration: none;">
+                <img style="height: 100px; border-radius: 90px;"
+                src="https://static.vecteezy.com/system/resources/thumbnails/007/642/438/small/laptop-electronic-portable-computer-notebook-line-pop-art-potrait-logo-colorful-design-illustration-vector.jpg">
+                <h3>Laptops</h3>
             </a>
         </div>
-        <div class="col-3 text-center">
-            <a href="" (click)="filter('2')">
-                <img src="" alt="">
-                <h2>laptops</h2>
-            </a>
-        </div>
-        <div class="col-3 text-center">
-            <a href="" (click)="filter('3')">
-                <img src="" alt="">
-                <h2>smart watch</h2>
+        <div (click)="filter(3)"  class="col-3 text-center">
+            <a style="text-decoration: none;">
+                <img style="height: 100px; border-radius: 90px;"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw93RccN1BC9qqb_44pVNhAluYhovPrj3-eA&usqp=CAU" alt="">
+                <h3>Smart Watches</h3>
             </a>
         </div>
     </div>
 </div>
-<!-- Section-->
-<section class="py-5">
-    <div class="container px-4 px-lg-5 mt-5">
+
+
+<section class="py-5OverHead bg-dark ">
+    <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-            <div class="col-lg-3 mb-5" *ngFor="let i of filterCategory | filter: '':'productName'">
-                <div class="card h-100 border border-dark">
+            <div class="col mb-5 pb-3" *ngFor=" let i of filterCategory | filter : searchString :'productName'">
+                <div class="h-100 card mt-5 bg-secondary">
                     <!-- Product image-->
-                    <img style="height:200px;" class="card-img-top " src="{{i.productImg}}" />
+                    <img style="height: 180px;" class="card-img-top" src="{{i.productImg}}" alt="..." />
                     <!-- Product details-->
-                    <div class="card-body p-4 ">
+                    <div class="card-body p-4">
                         <div class="text-center">
                             <!-- Product name-->
                             <h5 class="fw-bolder">{{i.productName}}</h5>
                             <!-- Product price-->
-                            <!-- {{i.price}} -->
+                            {{i.price}}
+                            {{i.description}}
                         </div>
+
                     </div>
                     <!-- Product actions-->
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-black">
-                        <div class="text-center"><a class="btn btn-warning btn-outline-dark mt-3"
-                                routerLink="view-product/{{i.id}}">view</a></div>
+                    <div class="card-footer p-1 border-top-0 bg-black">
+                        <div class="text-center my-3"><a class="btn btn-outline-secondary mt-3"
+                                routerLink="view-product/{{i.id}}">View</a>
+                        </div>
                     </div>
                 </div>
             </div>
+            <!-- Product actions-->
+            <!-- <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                    </div> -->
         </div>
     </div>
 </section>

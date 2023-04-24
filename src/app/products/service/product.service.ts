@@ -1,18 +1,26 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
 
-  constructor(private http:HttpClient) { }
+  search = new BehaviorSubject("")
 
-  viewAllProduct(){
+  constructor(private http: HttpClient) { }
+  //api to view all products
+  ViewAllProduct() {
     return this.http.get('http://localhost:3000/products')
   }
 
-  viesProduct(pid:any){
-    return this.http.get('http://localhost:3000/products/'+pid)
+  //view single product 
+  ViewProduct(pid: any) {
+    return this.http.get('http://localhost:3000/products/' + pid)
+  }
+
+  deleteProduct(pid: any) {
+    return this.http.delete('http://localhost:3000/products/' + pid)
   }
 }

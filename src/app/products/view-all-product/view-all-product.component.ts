@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../service/product.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-view-all-product',
@@ -8,21 +9,28 @@ import { ProductService } from '../service/product.service';
 })
 export class ViewAllProductComponent  implements OnInit{
 
-  poductsData:any
-  filterCategory : any
+  productData: any
+  filterCategory: any
 
-  constructor(private ps:ProductService) {
+  searchString: any = ""
 
-  }
+  constructor(private ps: ProductService) { }
 
   ngOnInit(): void {
-    this.ps.viewAllProduct().subscribe((data:any)=>{
-      this.poductsData=data
+    this.ps.ViewAllProduct().subscribe((data: any) => {
+      this.productData = data;
+    })
+
+    this.ps.search.subscribe((data: any) => {
+      this.searchString = data
+
     })
   }
 
-  filter(category:any){
-    this.filterCategory=this.poductsData.filter((i:any)=>i.categoryId==category || category=="")
+  filter(category: any) {
+    this.filterCategory = this.productData.filter((i: any) =>
+      i.categoryId == category || category == "")
+
   }
 
 
